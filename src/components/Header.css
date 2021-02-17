@@ -1,0 +1,79 @@
+.header {
+  display: flex;
+  background-color: #333;
+  color: #d8f3dc;
+}
+
+.topnav {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  overflow: hidden;
+  padding: 10px 0;
+}
+.topnav h1 {
+  font-size: 2vmax;
+  margin: 0;
+}
+.topnav img {
+  width: 22px;
+  vertical-align: middle;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: #d8f3dc;
+  text-align: center;
+  padding: 0 16px;
+  text-decoration: none;
+}
+.topnav a:hover {
+  color: #fff;
+}
+.topnav a.active {
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+.topnav a:only-of-type {
+  padding-left: 0px;
+}
+@media screen and (max-width: 1020px) {
+  .topnav a:only-of-type {
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .topnav a:not(:only-of-type) {
+    display: none;
+    padding-left: 0px;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .topnav.responsive {
+    position: relative;
+    display: block;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 10px;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    padding-left: 20px;
+  }
+}
