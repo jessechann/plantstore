@@ -2,17 +2,19 @@ import "./Products.css";
 import PRODUCTSDATA from "../PRODUCTSDATA";
 import { Link } from "react-router-dom";
 
-const ProductItem = ({ id, img, name, price }) => (
-  <div className="productItem">
-    <Link to={`/products/${id}`}>
-      <img src={require(`../assets/${img}`).default} alt="test" />
-      <div className="productText">
-        <span className="productName">{name}</span>
-        <span className="price">${price}</span>
-      </div>
-    </Link>
-  </div>
-);
+function ProductItem({ id, img, name, price }) {
+  return (
+    <div className="productItem">
+      <Link to={`/products/${id}`}>
+        <img src={require(`../assets/${img}`).default} alt="test" />
+        <div className="productText">
+          <span className="productName">{name}</span>
+          <span className="price">${price}</span>
+        </div>
+      </Link>
+    </div>
+  );
+}
 
 export default function Products() {
   return (

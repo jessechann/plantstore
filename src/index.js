@@ -9,7 +9,7 @@ import { ContextProvider } from "./CartContext";
 ReactDOM.render(
   <React.StrictMode>
     <ContextProvider>
-      <Router>
+      <Router basename="/plantstore">
         <App />
       </Router>
     </ContextProvider>

@@ -1,5 +1,5 @@
 import "./App.css";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useRouteMatch } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Products from "./components/Products";
